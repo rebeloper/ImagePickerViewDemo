@@ -3,23 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C9CD927F25B6C88C00920B81 /* ImagePickerViewDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CD927E25B6C88C00920B81 /* ImagePickerViewDemoApp.swift */; };
-		C9CD928125B6C88C00920B81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CD928025B6C88C00920B81 /* ContentView.swift */; };
 		C9CD928325B6C88F00920B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CD928225B6C88F00920B81 /* Assets.xcassets */; };
 		C9CD928625B6C88F00920B81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CD928525B6C88F00920B81 /* Preview Assets.xcassets */; };
+		C9CD928F25B6C8F500920B81 /* UIImagePickerControllerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CD928E25B6C8F500920B81 /* UIImagePickerControllerContentView.swift */; };
+		C9CD929325B6C91D00920B81 /* PHPickerViewControllerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CD929225B6C91D00920B81 /* PHPickerViewControllerContentView.swift */; };
+		C9CD929725B6CA7B00920B81 /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = C9CD929625B6CA7B00920B81 /* ImagePickerView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9CD927B25B6C88C00920B81 /* ImagePickerViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePickerViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CD927E25B6C88C00920B81 /* ImagePickerViewDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewDemoApp.swift; sourceTree = "<group>"; };
-		C9CD928025B6C88C00920B81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9CD928225B6C88F00920B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CD928525B6C88F00920B81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9CD928725B6C88F00920B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9CD928E25B6C8F500920B81 /* UIImagePickerControllerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerContentView.swift; sourceTree = "<group>"; };
+		C9CD929225B6C91D00920B81 /* PHPickerViewControllerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerViewControllerContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CD929725B6CA7B00920B81 /* ImagePickerView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				C9CD927E25B6C88C00920B81 /* ImagePickerViewDemoApp.swift */,
-				C9CD928025B6C88C00920B81 /* ContentView.swift */,
+				C9CD928E25B6C8F500920B81 /* UIImagePickerControllerContentView.swift */,
+				C9CD929225B6C91D00920B81 /* PHPickerViewControllerContentView.swift */,
 				C9CD928225B6C88F00920B81 /* Assets.xcassets */,
 				C9CD928725B6C88F00920B81 /* Info.plist */,
 				C9CD928425B6C88F00920B81 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = ImagePickerViewDemo;
+			packageProductDependencies = (
+				C9CD929625B6CA7B00920B81 /* ImagePickerView */,
+			);
 			productName = ImagePickerViewDemo;
 			productReference = C9CD927B25B6C88C00920B81 /* ImagePickerViewDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = C9CD927225B6C88C00920B81;
+			packageReferences = (
+				C9CD929525B6CA7B00920B81 /* XCRemoteSwiftPackageReference "ImagePickerView" */,
+			);
 			productRefGroup = C9CD927C25B6C88C00920B81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CD928125B6C88C00920B81 /* ContentView.swift in Sources */,
 				C9CD927F25B6C88C00920B81 /* ImagePickerViewDemoApp.swift in Sources */,
+				C9CD928F25B6C8F500920B81 /* UIImagePickerControllerContentView.swift in Sources */,
+				C9CD929325B6C91D00920B81 /* PHPickerViewControllerContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9CD929525B6CA7B00920B81 /* XCRemoteSwiftPackageReference "ImagePickerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/ImagePickerView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9CD929625B6CA7B00920B81 /* ImagePickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9CD929525B6CA7B00920B81 /* XCRemoteSwiftPackageReference "ImagePickerView" */;
+			productName = ImagePickerView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9CD927325B6C88C00920B81 /* Project object */;
 }
